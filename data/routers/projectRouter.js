@@ -27,7 +27,7 @@ router.post('/add', (req, res) => {
   const project = req.body;
   db.insert(project)
     .then(project => {
-      res.status(200).json(project)
+      res.status(200).json(project);
     })
     .catch(error => {
       res.status(500).json(console.error('Error adding project', error));

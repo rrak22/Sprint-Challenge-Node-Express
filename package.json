@@ -9,6 +9,8 @@
   "author": "Robert Rak <robertrak@hotmail.com>",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.4",
+    "create-react-app": "^1.5.2",
     "express": "^4.16.3",
     "knex": "^0.14.4",
     "sqlite3": "^4.0.0"

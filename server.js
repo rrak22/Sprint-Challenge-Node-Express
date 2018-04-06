@@ -1,4 +1,6 @@
 const express = require ('express');
+const cors = require('cors');
+const port = 5000;
 const server = express();
 
 const projectRouter = require('./data/routers/projectRouter.js');
@@ -10,6 +12,7 @@ const logger = (req, res, next) => {
 }
 
 server.use(express.json());
+server.use(cors());
 server.use(logger);
 
 server.use('/api/projects', projectRouter);
@@ -19,5 +22,4 @@ server.get('/', (req, res) => {
   res.send({ api: 'Running...' });
 });
 
-const port = 5000;
 server.listen(port, () => console.log('API Running on port 5000'));
